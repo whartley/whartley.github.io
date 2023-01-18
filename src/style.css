@@ -1,0 +1,186 @@
+body{
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+section{
+    background-color: white;
+}
+
+.intro{
+    background-color: #1c1d25;
+    height: 100vh;
+    color: white;
+    font-size: 40px;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+
+
+li{
+    /*width: 200px;*/
+    text-decoration: none;
+}
+
+h1{
+    font-size: 90px;
+    margin: 0;
+}
+
+h2{
+    font-size: 50px;
+}
+
+p{
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.sub-text{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+.intro-area{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-text{
+    margin-left: 40px;
+    margin-bottom: 200px;
+}
+
+.button{
+    width: 200px;
+    height: 55px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 5px;
+    margin-top: 20px;
+    color: black;
+}
+
+
+.button:active{
+    background-color: #a9a9a9;
+    color: #808080;
+}
+
+.socials{
+    padding-bottom: 200px;
+}
+
+.social{
+    margin: 20px;
+}
+
+.sub-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.sub-section-alt{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+}
+
+.headshot{
+    width: 400px;
+    border-radius: 200px;
+}
+
+.headshot-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+    .headshot-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+hr{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger:focus{
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px){
+    .hamburger{
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        display: block;
+        margin: 20px;
+        align-self: flex-end;
+    }
+
+    ul{
+        display: none;
+        background-color: #2b2c38;
+        margin: 0px;
+    }
+
+    ul.show{
+        display: block;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #2b2c38;
+    }   
+}
+
+.socials {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.fa-envelope:hover,.fa-linkedin:hover,.fa-github:hover {
+    color: #033980;
+}
