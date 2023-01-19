@@ -94,6 +94,9 @@ p{
     cursor: pointer;
 }
 
+.button:hover{
+   color: #033980;
+}
 
 .button:active{
     background-color: #a9a9a9;
