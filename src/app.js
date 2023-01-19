@@ -27,12 +27,12 @@ function sendEmail(){
         Username : "woohart02@gmail.com",
         Password : "kvoqeieqjveggpit",
         To : "woohart02@gmail.com",
-        From : document.getElementById('email').value,
-        Subject : document.getElementById('subject').value,
-        Body : 'Name: ' + document.getElementById('name').value 
-        + '<br/> Email: ' + document.getElementById('email').value 
-        + '<br/> Subject: ' + document.getElementById('subject').value 
-        + '<br/> Message: ' + document.getElementById('message').value
+        From : document.getElementById("email").value,
+        Subject : document.getElementById("subject").value,
+        Body : "Name: " + document.getElementById("name").value 
+        + "<br/> Email: " + document.getElementById("email").value 
+        + "<br/> Subject: " + document.getElementById("subject").value 
+        + "<br/> Message: " + document.getElementById("message").value
     }).then(
       message => alert("Message Sent Successfully")
     );
