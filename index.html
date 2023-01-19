@@ -1,7 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="src/style.css">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap');
@@ -12,9 +11,10 @@
     </head>
     <body>
         <section class="intro">
-            <nav>
-                <div></div>
+            <nav id="navbar">
                 <ul id="nav-list">
+                    <li><a href="#home">Woodie</a></li>
+                    <li></li>
                     <li><a href="#about-me">About Me</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -88,9 +88,17 @@
 
         <footer id="contact">
             <h2>Contact Me</h2>
-            
+            <div class="form">
+                <form method="POST">
+                    <input type="text"  placeholder="Name" id="name" autocomplete="off">
+                    <input type="email" placeholder="Email Address" id="email" autocomplete="off">
+                    <input type="text"  placeholder="Subject" id="subject" autocomplete="off">
+                    <textarea placeholder="Message" id="message" class="w-50" cols="30" rows="10"></textarea>
+                    <button class="button" id="btn "type="submit">Send</button>
+               </form>
+            </div>
         </footer>
-
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="src/app.js"></script>
     </body>
 </html>

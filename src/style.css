@@ -21,7 +21,7 @@ footer{
 
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
 }
 
 ul{
@@ -84,16 +84,13 @@ p{
     padding-top: 5px;
     margin-top: 20px;
     color: black;
+    cursor: pointer;
 }
 
 
 .button:active{
     background-color: #a9a9a9;
     color: #808080;
-}
-
-.socials{
-    padding-bottom: 200px;
 }
 
 .social{
@@ -178,11 +175,28 @@ a{
     }   
 }
 
-.socials {
-    font-size: 36px;
-    cursor: pointer;
-}
 
 .fa-envelope:hover,.fa-linkedin:hover,.fa-github:hover, .fa-file-pdf:hover {
     color: #033980;
+}
+
+/* display background color black on navbar scroll */
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+
+.form{
+    width: 500px;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 6px;
+    outline: none;
+    border: none;
+    margin: 6px 0px;
 }
