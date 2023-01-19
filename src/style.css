@@ -183,6 +183,6 @@ a{
     cursor: pointer;
 }
 
-.fa-envelope:hover,.fa-linkedin:hover,.fa-github:hover {
+.fa-envelope:hover,.fa-linkedin:hover,.fa-github:hover, .fa-file-pdf:hover {
     color: #033980;
 }
