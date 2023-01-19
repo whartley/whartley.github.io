@@ -48,6 +48,13 @@ h2{
     font-size: 50px;
 }
 
+h3{
+    font-size: 50px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+}
+
 p{
     margin: 5px;
     font-size: 30px;
@@ -176,8 +183,11 @@ a{
 }
 
 
-.fa-envelope:hover,.fa-linkedin:hover,.fa-github:hover, .fa-file-pdf:hover {
+.fa-envelope:hover,.fa-linkedin:hover,.fa-github:hover{
     color: #033980;
+}
+.fa-file-pdf:hover{
+    color: darkred;
 }
 
 /* display background color black on navbar scroll */
