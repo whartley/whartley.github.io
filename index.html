@@ -89,7 +89,7 @@
         <footer id="contact">
             <div class="form">
                 <h3>Contact Me</h3>
-                <form onsubmit="sendEmail();" method="post">
+                <form onsubmit="sendEmail(); reset(); return false" method="post">
                     <input type="text"  placeholder="Name" id="name" autocomplete="off">
                     <input type="email" placeholder="Email Address" id="email" autocomplete="off">
                     <input type="text"  placeholder="Subject" id="subject" autocomplete="off">
