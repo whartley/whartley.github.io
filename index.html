@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en">
     <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="src/style.css">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap');
@@ -88,7 +89,7 @@
         <footer id="contact">
             <div class="form">
                 <h3>Contact Me</h3>
-                <form onsubmit="sendEmail(); reset(); return false" >
+                <form onsubmit="sendEmail();" method="post">
                     <input type="text"  placeholder="Name" id="name" autocomplete="off">
                     <input type="email" placeholder="Email Address" id="email" autocomplete="off">
                     <input type="text"  placeholder="Subject" id="subject" autocomplete="off">
