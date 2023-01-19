@@ -21,24 +21,19 @@ window.onscroll = function() {
 }*/
 
 //send message to gmail
-var btn = document.getElementById('btn');
-
-btn?.addEventListener('click', function(e){
-    e.preventDefault()
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-    var body = 'name' + name + '<br/> email: ' + email + '<br/> subject: ' + subject + '<br/> message: ' + message;
-    email.send({
+function sendEmail(){
+    Email.send({
         Host : "smtp.gmail.com",
         Username : "woohart02@gmail.com",
         Password : "kvoqeieqjveggpit",
-        To : 'woohart02@gmail.com',
-        From : email,
-        Subject : subject,
-        Body : body
+        To : "woohart02@gmail.com",
+        From : document.getElementById('email').value,
+        Subject : document.getElementById('subject').value,
+        Body : 'Name: ' + document.getElementById('name').value 
+        + '<br/> Email: ' + document.getElementById('email').value 
+        + '<br/> Subject: ' + document.getElementById('subject').value 
+        + '<br/> Message: ' + document.getElementById('message').value;
     }).then(
-      message => alert(message)
+      message => alert("Message Sent Successfully")
     );
-})
+}
