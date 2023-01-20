@@ -7,32 +7,22 @@ function toggleBtn(){
 
 hambugerBtn.addEventListener('click', toggleBtn);
 
-// add class navbarDark on navbar scroll
-/*const header = document.getElementById('navbar');
-
-window.onscroll = function() {
-    var top = window.scrollY;
-    if(top >=100) {
-        header.classList.add('navbarDark');
-    }
-    else {
-        header.classList.remove('navbarDark');
-    }
-}*/
 
 //send message to gmail
 function sendEmail(){
+    let name=document.getElementById("name");
+    let email=document.getElementById("email");
+    let subject=document.getElementById("subject");
+    let text=document.getElementById("text-area"); 
     Email.send({
-        Host : "smtp.gmail.com",
-        Username : "woohart02@gmail.com",
-        Password : "kvoqeieqjveggpit",
+        SecureToken: "32b3e27e-a111-4d0c-b2d5-dd895e7e2655",
         To : "woohart02@gmail.com",
-        From : document.getElementById("email").value,
-        Subject : document.getElementById("subject").value,
-        Body : "Name: " + document.getElementById("name").value 
-        + "<br/> Email: " + document.getElementById("email").value 
-        + "<br/> Subject: " + document.getElementById("subject").value 
-        + "<br/> Message: " + document.getElementById("message").value
+        From : email,
+        Subject : subject,
+        Body : "Name: " + name.value
+        + "<br/> Email: " + email.value 
+        + "<br/> Subject: " + subject.value 
+        + "<br/> Message: " + text.value
     }).then(
       message => alert("Message Sent Successfully")
     );

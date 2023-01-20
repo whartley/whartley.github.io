@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Woodie Hartley</title>
 </head>
 
@@ -124,18 +125,22 @@
     </section>
 
     <footer id="contact">
-        <div class="form">
-            <h3>Contact Me</h3>
-            <form onsubmit="sendEmail(); reset(); return false" method="post">
-                <input type="text" placeholder="Name" id="name" autocomplete="off" />
-                <input type="email" placeholder="Email Address" id="email" autocomplete="off" />
-                <input type="text" placeholder="Subject" id="subject" autocomplete="off" />
-                <textarea placeholder="Message" id="message" cols="30" rows="10"></textarea>
-                <button class="button" id="btn " type="submit">Send</button>
+        <div class="wrapper">
+            <h2>Contact Me</h2>
+            <div id="error_message"></div>
+            <form id="myform" onsubmit="return false;">
+                <div class="input_field">
+                    <input type="text" placeholder="Name" id="name">
+                    <input type="email" placeholder="Email" id="email">
+                    <input type="text" placeholder="Subject" id="subject">
+                    <textarea type="text" placeholder="Message" id="text-area"></textarea>
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Send" onclick="sendEmail()">
+                </div>
             </form>
         </div>
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="src/app.js"></script>
 </body>
 
