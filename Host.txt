@@ -1,1 +1,1 @@
-@whartley.github.io v=spf1 a mx include:_spf.elasticemail.com ~all
+v=spf1 a mx include:_spf.elasticemail.com ~all
