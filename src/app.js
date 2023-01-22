@@ -17,7 +17,7 @@ function sendEmail(){
         email: document.getElementById('email').value,
         subject: document.getElementById('subject').value,
         message: document.getElementById('text-area').value
-    }
+    };
     
 emailjs
     .send(serviceID,templateID,tempParams)
