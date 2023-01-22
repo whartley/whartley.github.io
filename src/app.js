@@ -7,9 +7,31 @@ function toggleBtn(){
 
 hambugerBtn.addEventListener('click', toggleBtn);
 
+//Modal Functionality
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector(".btn-open");
+const closeModalBtn = document.querySelector(".btn-close");
 
+const openModal = function () {
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+  };
 
-//Send email with EmailJs
+const closeModal = function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+  };
+
+  closeModalBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
+  document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        modalClose();
+      }
+    });
+
+//Send email with EmailJs with Modal success message
 function sendEmail(){
     const serviceID = 'service_i7l8bnv';
     const templateID = 'template_yrxjlo2';
@@ -28,20 +50,9 @@ emailjs
         document.getElementById('email').value,
         document.getElementById('subject').value,
         document.getElementById('text-area').value
-        //alert("Message Sent Successfully");
+        openModal();
         console.log(tempParams,res.status, res.text);
     }).catch((err) => {console.log(JSON.stringify(err));});
 }
 
-//Modal Functionality
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".btn-open");
-const closeModalBtn = document.querySelector(".btn-close");
 
-const openModal = function () {
-    modal.classList.remove("hidden");
-    overlay.classList.remove("hidden");
-  };
-
-openModalBtn.addEventListener("click", openModal);
