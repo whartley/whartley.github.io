@@ -326,7 +326,7 @@ button{
     height: 80px;
 }
 
-.wrapper .btn input[type="submit"]{
+.wrapper .btn input[type="button"]{
     border: 0px;
     margin-top: 15px;
     padding: 10px;
