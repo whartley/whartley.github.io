@@ -131,15 +131,28 @@
             <form id="myform">
                 <div class="input_field">
                     <input type="text" placeholder="Name" id="name" />
-                    <input type="email" placeholder="Email" id="email" />
+                    <input type="email" placeholder="Email" id="email"/>
                     <input type="text" placeholder="Subject" id="subject" />
                     <textarea type="text" placeholder="Message" id="text-area"></textarea>
                 </div>
                 <div class="btn">
-                    <input type="button" id="submit-button" value="Send" onclick="sendEmail()">
+                    <section class="modal hidden">
+                        <div class="flex">
+                          <button class="btn-close">⨉</button>
+                        </div>
+                        <div>
+                          <h3>Message Submitted!</h3>
+                          <p>
+                            Message successfully submitted!
+                          </p>
+                        </div>
+                      </section>
+                      
+                      <div class="overlay hidden"></div>
+                    <input type="button" id="submit-button" value="Send" class=".btn-open" onclick="sendEmail()">
                 </div>
             </form>
-        </div>
+        </div>   
     </footer>
     <script src="src/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

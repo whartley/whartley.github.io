@@ -7,6 +7,8 @@ function toggleBtn(){
 
 hambugerBtn.addEventListener('click', toggleBtn);
 
+
+
 //Send email with EmailJs
 function sendEmail(){
     const serviceID = 'service_i7l8bnv';
@@ -26,7 +28,20 @@ emailjs
         document.getElementById('email').value,
         document.getElementById('subject').value,
         document.getElementById('text-area').value
-        alert("Message Sent Successfully");
+        //alert("Message Sent Successfully");
         console.log(tempParams,res.status, res.text);
     }).catch((err) => {console.log(JSON.stringify(err));});
 }
+
+//Modal Functionality
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector(".btn-open");
+const closeModalBtn = document.querySelector(".btn-close");
+
+const openModal = function () {
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+  };
+
+openModalBtn.addEventListener("click", openModal);
